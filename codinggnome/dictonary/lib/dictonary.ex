@@ -5,7 +5,8 @@ defmodule Dictonary do
   end
 
   def read_words_file do
-    "./assets/words.txt"
+    "../assets/words.txt"
+    |> Path.expand(__DIR__)
     |> File.read!()
   end
 
